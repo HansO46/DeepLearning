@@ -1,0 +1,4 @@
+/home/ceci/Documents/code/CSharp/KNN_V2/obj/Debug/net7.0/KNN_V2.GeneratedMSBuildEditorConfig.editorconfig
+/home/ceci/Documents/code/CSharp/KNN_V2/obj/Debug/net7.0/KNN_V2.AssemblyInfoInputs.cache
+/home/ceci/Documents/code/CSharp/KNN_V2/obj/Debug/net7.0/KNN_V2.AssemblyInfo.cs
+/home/ceci/Documents/code/CSharp/KNN_V2/obj/Debug/net7.0/KNN_V2.csproj.CoreCompileInputs.cache

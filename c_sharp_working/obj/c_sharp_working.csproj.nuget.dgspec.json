@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/ceci/Documents/code/CSharp/c_sharp_working/c_sharp_working.csproj": {}
+  },
+  "projects": {
+    "/home/ceci/Documents/code/CSharp/c_sharp_working/c_sharp_working.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ceci/Documents/code/CSharp/c_sharp_working/c_sharp_working.csproj",
+        "projectName": "c_sharp_working",
+        "projectPath": "/home/ceci/Documents/code/CSharp/c_sharp_working/c_sharp_working.csproj",
+        "packagesPath": "/home/ceci/.nuget/packages/",
+        "outputPath": "/home/ceci/Documents/code/CSharp/c_sharp_working/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ceci/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net452"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net452": {
+            "targetAlias": "net452",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net452": {
+          "targetAlias": "net452",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Drawing-dotnet-core": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+//###################################
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run C# Program",
+            "type": "mono",
+            "request": "launch",
+            "program": "${workspaceFolder}/program.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": null,
+            "env": {},
+            "externalConsole": false
+        }
+    ]
+}
+//###################################

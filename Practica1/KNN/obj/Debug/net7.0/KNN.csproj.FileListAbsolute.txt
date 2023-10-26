@@ -1,0 +1,14 @@
+/home/ceci/Documents/code/CSharp/Practica1/KNN/bin/Debug/net7.0/KNN
+/home/ceci/Documents/code/CSharp/Practica1/KNN/bin/Debug/net7.0/KNN.deps.json
+/home/ceci/Documents/code/CSharp/Practica1/KNN/bin/Debug/net7.0/KNN.runtimeconfig.json
+/home/ceci/Documents/code/CSharp/Practica1/KNN/bin/Debug/net7.0/KNN.dll
+/home/ceci/Documents/code/CSharp/Practica1/KNN/bin/Debug/net7.0/KNN.pdb
+/home/ceci/Documents/code/CSharp/Practica1/KNN/obj/Debug/net7.0/KNN.GeneratedMSBuildEditorConfig.editorconfig
+/home/ceci/Documents/code/CSharp/Practica1/KNN/obj/Debug/net7.0/KNN.AssemblyInfoInputs.cache
+/home/ceci/Documents/code/CSharp/Practica1/KNN/obj/Debug/net7.0/KNN.AssemblyInfo.cs
+/home/ceci/Documents/code/CSharp/Practica1/KNN/obj/Debug/net7.0/KNN.csproj.CoreCompileInputs.cache
+/home/ceci/Documents/code/CSharp/Practica1/KNN/obj/Debug/net7.0/KNN.dll
+/home/ceci/Documents/code/CSharp/Practica1/KNN/obj/Debug/net7.0/refint/KNN.dll
+/home/ceci/Documents/code/CSharp/Practica1/KNN/obj/Debug/net7.0/KNN.pdb
+/home/ceci/Documents/code/CSharp/Practica1/KNN/obj/Debug/net7.0/KNN.genruntimeconfig.cache
+/home/ceci/Documents/code/CSharp/Practica1/KNN/obj/Debug/net7.0/ref/KNN.dll

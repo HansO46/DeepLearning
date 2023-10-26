@@ -1,0 +1,29 @@
+{    
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C# Program",
+            "command": "mcs",
+            "args": ["program.cs"],
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": {
+                "owner": "csharp",
+                "fileLocation": ["relative", "${workspaceFolder}"],
+                "pattern": {
+                    "regexp": "^(.*\\.cs)\\((\\d+),(\\d+)\\): (.+)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "message": 4
+                }
+            }
+        }
+    ]
+}

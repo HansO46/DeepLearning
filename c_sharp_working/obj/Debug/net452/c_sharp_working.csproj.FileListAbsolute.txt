@@ -1,0 +1,14 @@
+/home/ceci/Documents/code/CSharp/c_sharp_working/bin/Debug/net452/c_sharp_working.exe.config
+/home/ceci/Documents/code/CSharp/c_sharp_working/bin/Debug/net452/c_sharp_working.exe
+/home/ceci/Documents/code/CSharp/c_sharp_working/bin/Debug/net452/c_sharp_working.pdb
+/home/ceci/Documents/code/CSharp/c_sharp_working/bin/Debug/net452/System.Drawing-dotnet-core.dll
+/home/ceci/Documents/code/CSharp/c_sharp_working/bin/Debug/net452/System.Drawing.Primitives.dll
+/home/ceci/Documents/code/CSharp/c_sharp_working/bin/Debug/net452/System.Runtime.InteropServices.RuntimeInformation.dll
+/home/ceci/Documents/code/CSharp/c_sharp_working/obj/Debug/net452/c_sharp_working.csproj.AssemblyReference.cache
+/home/ceci/Documents/code/CSharp/c_sharp_working/obj/Debug/net452/c_sharp_working.GeneratedMSBuildEditorConfig.editorconfig
+/home/ceci/Documents/code/CSharp/c_sharp_working/obj/Debug/net452/c_sharp_working.AssemblyInfoInputs.cache
+/home/ceci/Documents/code/CSharp/c_sharp_working/obj/Debug/net452/c_sharp_working.AssemblyInfo.cs
+/home/ceci/Documents/code/CSharp/c_sharp_working/obj/Debug/net452/c_sharp_working.csproj.CoreCompileInputs.cache
+/home/ceci/Documents/code/CSharp/c_sharp_working/obj/Debug/net452/c_sharp_working.csproj.CopyComplete
+/home/ceci/Documents/code/CSharp/c_sharp_working/obj/Debug/net452/c_sharp_working.exe
+/home/ceci/Documents/code/CSharp/c_sharp_working/obj/Debug/net452/c_sharp_working.pdb
