@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KNN
-build_property.ProjectDir = /home/ceci/Documents/code/CSharp/Practica1/KNN/
+build_property.ProjectDir = /home/hans/Documents/Code/DeepLearning/DeepLearning/Practica1/KNN/

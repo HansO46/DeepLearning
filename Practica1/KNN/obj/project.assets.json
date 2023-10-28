@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "/home/ceci/.nuget/packages/": {}
+    "/home/hans/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ceci/Documents/code/CSharp/Practica1/KNN/KNN.csproj",
+      "projectUniqueName": "/home/hans/Documents/Code/DeepLearning/DeepLearning/Practica1/KNN/KNN.csproj",
       "projectName": "KNN",
-      "projectPath": "/home/ceci/Documents/code/CSharp/Practica1/KNN/KNN.csproj",
-      "packagesPath": "/home/ceci/.nuget/packages/",
-      "outputPath": "/home/ceci/Documents/code/CSharp/Practica1/KNN/obj/",
+      "projectPath": "/home/hans/Documents/Code/DeepLearning/DeepLearning/Practica1/KNN/KNN.csproj",
+      "packagesPath": "/home/hans/.nuget/packages/",
+      "outputPath": "/home/hans/Documents/Code/DeepLearning/DeepLearning/Practica1/KNN/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ceci/.nuget/NuGet/NuGet.Config"
+        "/home/hans/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.113/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p3p9TzG8GhwGTNtKu0ogQwnwBNMcKSoWga6Vl7Fdh5UQ6v+2cYcOm+yIU7t5WG+Cbc5sfPT+MZseKXNpaeZu+A==",
+  "dgSpecHash": "l97xtjsBEEqBa8l3Fjxu6uCFM7jsiL1CzoeMN+7RagRsFipRPAsVIg51iY5Pyz7nR0MNj8fPsXNJmFiIEl4QBw==",
   "success": true,
-  "projectFilePath": "/home/ceci/Documents/code/CSharp/Practica1/KNN/KNN.csproj",
+  "projectFilePath": "/home/hans/Documents/Code/DeepLearning/DeepLearning/Practica1/KNN/KNN.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
