@@ -36,56 +36,13 @@ class Program
            
     }
 
-
-
-
-    static void Main()
-    {
-        int acierto=0;
-        int error=0;
-        int total = 0;
-        double puntuacion = 0;
-        const string archivoBaseDeDatos = "iris.txt";//leer archivo
-        string[] filas = File.ReadAllLines(archivoBaseDeDatos);//guarda cada ilera del txt en un array
-        double proporcion;
-        proporcion= 0.7;
-        
-        // Aleatoriamente reorganizar las filas
-        Random rand = new Random();
-        filas = filas.OrderBy(x => rand.Next()).ToArray();
-        //foreach (var fila in filas)
-        //{
-        //    Console.WriteLine(fila);
-        //}
-        // Dividir los datos en una proporción del 80/20
-        int totalFilas = filas.Length;
-        int entrenamientoSize = (int) (totalFilas * proporcion);
-
-        string[] datatrain = filas.Take(entrenamientoSize).ToArray();
-        string[] datatest = filas.Skip(entrenamientoSize).ToArray();
-        double[,] distancias= new double[datatrain.Length,2];
-
-        int clase = 0;
-        int K = 3;
-        // Para acceder al valor de un rasgo en una fila del dataset:
-        string ejemploFilaDataset = datatrain[0];
-       // string[] datosEnFila = ejemploFilaDataset.Split(',');
-        //string clase = datosEnFila[datosEnFila.Length-1];
-        
-        //bucle que evalua los datos del datatest punto a punto
-        for (int datatest_points = 0; datatest_points < datatest.Length; datatest_points++)
-        {
-            //guarda una ilera de la DB deacuerdo al indice del bucle
-            string datosTest = datatest[datatest_points];
-            string[] datosEnFilaTest = datosTest.Split(',');//divide la ilera guardada por las comas
-             
-             //bucle por cada valor en los datos de entrenamiento
-             int ix = 0;
-             foreach (string data in datatrain) //guarda una ilera de la DB deacuerdo al indice del bucle pero ahora para el datatest
+    static void DeterminarDistancias(string[] datatrain,string[] datosEnFilaTest, double[,] distancias ){
+                     int ix = 0;
+            foreach (string data in datatrain) //guarda una ilera de la DB deacuerdo al indice del bucle pero ahora para el datatest
              {
                 //Console.WriteLine(ix +"|"+data+ "|"+ datosTest);
                 string[] datosEnFilaTrain = data.Split(','); //divide los datos por comas
-
+                int clase = 0;
                 double distancia=0;
                 double datosDataTrain=0;
                 double datosDataTest=0;
@@ -131,8 +88,56 @@ class Program
 
                 ix ++;
              }
+    }
+
+
+
+
+    static void Main()
+    {
+        int acierto=0;
+        int error=0;
+        int total = 0;
+        double puntuacion = 0;
+        const string archivoBaseDeDatos = "iris.txt";//leer archivo
+        string[] filas = File.ReadAllLines(archivoBaseDeDatos);//guarda cada ilera del txt en un array
+        double proporcion;
+        proporcion= 0.7;
+        
+        // Aleatoriamente reorganizar las filas
+        Random rand = new Random();
+        filas = filas.OrderBy(x => rand.Next()).ToArray();
+        //foreach (var fila in filas)
+        //{
+        //    Console.WriteLine(fila);
+        //}
+        // Dividir los datos en una proporción del 80/20
+        int totalFilas = filas.Length;
+        int entrenamientoSize = (int) (totalFilas * proporcion);
+
+        string[] datatrain = filas.Take(entrenamientoSize).ToArray();
+        string[] datatest = filas.Skip(entrenamientoSize).ToArray();
+        double[,] distancias= new double[datatrain.Length,2];
+
+        int clase = 0;
+        int K = 3;
+        // Para acceder al valor de un rasgo en una fila del dataset:
+        string ejemploFilaDataset = datatrain[0];
+        int numCentroides = 3;
+       // string[] datosEnFila = ejemploFilaDataset.Split(',');
+        //string clase = datosEnFila[datosEnFila.Length-1];
+        
+        //bucle que evalua los datos del datatest punto a punto
+        for (int datatest_points = 0; datatest_points < datatest.Length; datatest_points++)
+        {
+            //guarda una ilera de la DB deacuerdo al indice del bucle
+            string datosTest = datatest[datatest_points];
+            string[] datosEnFilaTest = datosTest.Split(',');//divide la ilera guardada por las comas
+             
+            DeterminarDistancias(datatrain,datosEnFilaTest,distancias);
                 //metodo de ordenamiento
-               Burbuja(distancias);
+            Burbuja(distancias); //bucle por cada valor en los datos de entrenamiento
+
                // Console.ReadLine();
 
              if (datatest_points< 5)
