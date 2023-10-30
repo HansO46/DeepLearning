@@ -44,7 +44,7 @@ class Program
                 string[] datosEnFilaTrain = data.Split(','); //divide los datos por comas
                 int clase = 0;
                 double distancia=0;
-                double datosDataTrain=0;
+                double datosDataTrain =0;
                 double datosDataTest=0;
                 for (int columna = 0; columna < datosEnFilaTrain.Length-1; columna++)//por cada dato en la fila menos la clase
                 {
@@ -102,7 +102,7 @@ class Program
         const string archivoBaseDeDatos = "iris.txt";//leer archivo
         string[] filas = File.ReadAllLines(archivoBaseDeDatos);//guarda cada ilera del txt en un array
         double proporcion;
-        proporcion= 0.7;
+        proporcion= 0.8;
         
         // Aleatoriamente reorganizar las filas
         Random rand = new Random();
@@ -123,10 +123,58 @@ class Program
         int K = 3;
         // Para acceder al valor de un rasgo en una fila del dataset:
         string ejemploFilaDataset = datatrain[0];
-        int numCentroides = 3;
-       // string[] datosEnFila = ejemploFilaDataset.Split(',');
-        //string clase = datosEnFila[datosEnFila.Length-1];
-        
+        int numCentroides = 5;
+
+        if (numCentroides > 0){
+            int n = datatrain.Length;
+            int DatosPorCentroide = (int)Math.Ceiling((double)n / numCentroides); // Redondear hacia arriba
+
+            Console.WriteLine(DatosPorCentroide);
+
+            string[,] datosDataTrain = new string[numCentroides, DatosPorCentroide];
+            int index = 0;
+
+            for (int i = 0; i < numCentroides; i++)
+            {
+                for (int j = 0; j < DatosPorCentroide; j++)
+                {
+                    if (index < n)//evtamos que se metan datos nulos
+                    {
+                        datosDataTrain[i, j] = datatrain[index];
+                        index++;
+                    }
+                }
+            }
+           // Imprimir datosDataTrain
+            for (int i = 0; i < numCentroides; i++)
+            {
+                Console.WriteLine("Centroide"+ i);
+                for (int j = 0; j < DatosPorCentroide; j++)
+                {
+                    if (j < datosDataTrain.GetLength(1)) // Evitar imprimir más allá de los elementos copiados
+                        Console.WriteLine(datosDataTrain[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            // Promedio de centroides
+            double[] promedios = new double[numCentroides];
+            string[] datosEnFilaTest = datosTest.Split(',');//divide la ilera guardada por las comas
+            for (int i = 0; i < numCentroides; i++)
+            {
+                for (int j = 0; j < DatosPorCentroide; j++)
+                {
+                    if (j < datosDataTrain.GetLength(1)) 
+                    
+                    promedios[i] += datosDataTrain[i,j];
+                    
+                }
+                
+            }
+
+
+
+        }
+
         //bucle que evalua los datos del datatest punto a punto
         for (int datatest_points = 0; datatest_points < datatest.Length; datatest_points++)
         {
@@ -140,7 +188,7 @@ class Program
 
                // Console.ReadLine();
 
-             if (datatest_points< 5)
+            if (datatest_points< 5)
                 {
                     for (int i = 0; i < datatrain.Length; i++)
                      {
@@ -153,53 +201,53 @@ class Program
         
         
         //Obtener K neighbors
-        int Setosa=0, Versicolor=0, Virginical=0;
-        for (int counter = 0; counter < K; counter++)
-        {
-            if(distancias[counter,1]==1){
-                Setosa++;
-            }else if (distancias[counter,1]==2){
-                Versicolor++;
-            }else if (distancias[counter,1]==3){
-                Virginical++;
+                int Setosa=0, Versicolor=0, Virginical=0;
+            for (int counter = 0; counter < K; counter++)
+            {
+                if(distancias[counter,1]==1){
+                    Setosa++;
+                }else if (distancias[counter,1]==2){
+                    Versicolor++;
+                }else if (distancias[counter,1]==3){
+                    Virginical++;
+                }
             }
-        }
         
 
 
             Console.WriteLine(Setosa+ "|" + Versicolor+ "|" + Virginical );
             
-        if (Setosa>Versicolor&&  Setosa>Virginical)
-        {
-            Console.WriteLine("Su planta para el punto "+ datatest_points+ " ["+ datosEnFilaTest[0]+","+datosEnFilaTest[1]+","+datosEnFilaTest[2]+ ","+datosEnFilaTest[3]+"] pertenece a la especie Iris Setosa");
-            clase = 1;
+            if (Setosa>Versicolor&&  Setosa>Virginical)
+            {
+                Console.WriteLine("Su planta para el punto "+ datatest_points+ " ["+ datosEnFilaTest[0]+","+datosEnFilaTest[1]+","+datosEnFilaTest[2]+ ","+datosEnFilaTest[3]+"] pertenece a la especie Iris Setosa");
+                clase = 1;
 
-        }else if (Versicolor>Setosa&&  Versicolor>Virginical)
-        {
-            Console.WriteLine("Su planta para el punto "+ datatest_points+ " ["+ datosEnFilaTest[0]+","+datosEnFilaTest[1]+","+datosEnFilaTest[2]+ ","+datosEnFilaTest[3]+"] pertenece a la especie Iris Versicolor");
-            clase = 2;
-        }else if (Virginical>Versicolor&&  Virginical>Setosa)
-        {
-            Console.WriteLine("Su planta para el punto "+ datatest_points+ " ["+ datosEnFilaTest[0]+","+datosEnFilaTest[1]+","+datosEnFilaTest[2]+ ","+datosEnFilaTest[3]+"] pertenece a la especie Iris Virginical");
-            clase = 3;
-        }else{
-            Console.WriteLine(Setosa+ "|" + Versicolor+ "|" + Virginical);
-            clase = -1;
-        }
-    //verificar clase
-    int clase_real = Convert.ToInt32(datosEnFilaTest[4]);
-    Console.WriteLine(clase_real);
+            }else if (Versicolor>Setosa&&  Versicolor>Virginical)
+            {
+                Console.WriteLine("Su planta para el punto "+ datatest_points+ " ["+ datosEnFilaTest[0]+","+datosEnFilaTest[1]+","+datosEnFilaTest[2]+ ","+datosEnFilaTest[3]+"] pertenece a la especie Iris Versicolor");
+                clase = 2;
+            }else if (Virginical>Versicolor&&  Virginical>Setosa)
+            {
+                Console.WriteLine("Su planta para el punto "+ datatest_points+ " ["+ datosEnFilaTest[0]+","+datosEnFilaTest[1]+","+datosEnFilaTest[2]+ ","+datosEnFilaTest[3]+"] pertenece a la especie Iris Virginical");
+                clase = 3;
+            }else{
+                Console.WriteLine(Setosa+ "|" + Versicolor+ "|" + Virginical);
+                clase = -1;
+            }
+            //verificar clase
+            int clase_real = Convert.ToInt32(datosEnFilaTest[4]);
+            Console.WriteLine(clase_real);
     
-        if (clase == clase_real){
-            acierto++;
-        }else{
-            error++;
-        }
-        total = acierto+error;
-        puntuacion = (double) acierto/total* 100;
+            if (clase == clase_real){
+                acierto++;
+            }else{
+                error++;
+            }
+            total = acierto+error;
+            puntuacion = (double) acierto/total* 100;
 
-       Console.WriteLine(acierto+"+"+ error+":"+total+" -> % accuracy: "+ puntuacion+ "%");
-                Console.WriteLine("________________________________________________");
+            Console.WriteLine(acierto+"+"+ error+":"+total+" -> % accuracy: "+ puntuacion+ "%");
+            Console.WriteLine("________________________________________________");
 
                 //Console.ReadLine();
 
